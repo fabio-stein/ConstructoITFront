@@ -1,0 +1,10 @@
+<nb-card>
+  <nb-card-header>
+    {{Title}}
+  </nb-card-header>
+  <nb-card-body style="white-space: pre-wrap">{{Content}}</nb-card-body>
+  <nb-card-footer>
+    <button class="btn btn-primary" (click)="confirmClick()">Confirmar</button>
+    <button class="btn btn-secondar ml-2" (click)="cancelClick()">Cancelar</button>
+  </nb-card-footer>
+</nb-card>

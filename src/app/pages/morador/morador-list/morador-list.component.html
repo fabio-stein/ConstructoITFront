@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-lg-8">
+        <nb-card>
+            <nb-card-header>
+                <span>Moradores</span>
+            </nb-card-header>
+            <nb-card-body class="p-0">
+                <nb-actions size="large">
+                    <nb-action class="pl-0">
+                        <button nbButton ghost routerLink="new">
+                            <nb-icon icon="plus-circle"></nb-icon>
+                            <span class="ml-2">Cadastrar Morador</span>
+                        </button>
+                    </nb-action>
+                </nb-actions>
+                <nb-list>
+                    <nb-list-item *ngFor="let morador of moradores" class="d-flex">
+                        <nb-actions size="medium" class="w-100">
+                            <nb-action icon="pen" [link]="'/pages/morador/'+morador.Id" nbTooltip="Editar">
+                            </nb-action>
+                            <nb-action icon="trash" (click)="Remover(morador.Id)" nbTooltip="Remover">
+                            </nb-action>
+                            <nb-action nbTooltip="Nome" class="col-3">
+                                {{morador.Nome}}
+                            </nb-action>
+                            <nb-action nbTooltip="Família" class="col-3">
+                                {{morador.Familia}}
+                            </nb-action>
+                            <nb-action nbTooltip="Bichos de Estimação" class="col-2">
+                                {{morador.QuantidadeBichosEstimacao}}
+                            </nb-action>
+                        </nb-actions>
+                    </nb-list-item>
+                </nb-list>
+            </nb-card-body>
+        </nb-card>
+    </div>
+</div>
